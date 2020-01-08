@@ -29,8 +29,9 @@ for i in range(numLayers):
   for j in range(150):
     x = j//6
     y = j%6
-    if line[i+j] != 2 and img[x,y] == 2:
-      img[x,y] = int(line[i+j])
+    if line[i*150+j] != 2 and img[x,y] == 2:
+      img[x,y] = int(line[i*150+j])
+  print(img)
 
 print(img)
     
